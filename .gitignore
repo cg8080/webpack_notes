@@ -1,5 +1,1 @@
-/webpack-demo/node_modules
-/manageResources/node_modules
-/03manageOutput/node_modules
-/01webpack-demo/node_modules
-/02manageResources/node_modules
+*/node_modules
