@@ -1,20 +1,9 @@
-import printMe from './print.js'
+import './style.css'
 
-function component() {
-  var element = document.createElement('div');
-  var btn = document.createElement('button');
-  element.innerHTML = 'Hello Webpack';
-  btn.innerHTML = 'Click me and check console!';
-  btn.onclick = printMe;
-  element.append(btn);
-  return element;
+const component = () => {
+  let div = document.createElement('div');
+  div.innerHTML = 'HELLO WEBPACK';
+  div.classList.add('red');
+  return div;
 }
-document.body.appendChild(component());
-console.log('module.hot: ', module.hot);
-if (module.hot) {
-
-  module.hot.accept('./print.js', () => {
-    console.log('accept the update printMe')
-    printMe()
-  })
-}
+document.body.append(component());

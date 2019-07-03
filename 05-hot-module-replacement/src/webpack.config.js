@@ -4,6 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
+  // entry: './src/index.js',
+
   entry: {
     app: './src/index.js',
   },
@@ -11,6 +13,12 @@ module.exports = {
   devServer: {
     constBase: './dist',
     hot: true,
+  },
+  module: {
+    rules: [{
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+    }]
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
